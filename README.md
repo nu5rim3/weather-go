@@ -1,6 +1,6 @@
-# flutter_weather
+# flutter weather Go
 
-A new Flutter project.
+Sample app using Flutter to get the current weather.
 
 ## Getting Started
 
