@@ -17,7 +17,6 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => {
-              // print('splash done!'),
               Navigator.pushNamed(context, '/Intro')
             });
   }
