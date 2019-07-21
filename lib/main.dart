@@ -11,6 +11,12 @@ void main() => runApp(MaterialApp(
       theme: ThemeData(
           primaryColor: Colors.lightBlue[900],
           accentColor: Colors.yellowAccent),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => SplashScreen(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/Intro': (context) => IntroScreen(),
+      },
     ));
-

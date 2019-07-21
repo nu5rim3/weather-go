@@ -18,10 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Duration(seconds: 5),
         () => {
               // print('splash done!'),
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => IntroScreen()),
-              )
+              Navigator.pushNamed(context, '/Intro')
             });
   }
 
