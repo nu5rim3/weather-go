@@ -118,50 +118,6 @@ class _IntroScreenState extends State<IntroScreen> {
     );
   }
 
-  // List<Widget> renderListCustomTabs() {
-  //   List<Widget> tabs = new List();
-  //   for (int i = 0; i < slides.length; i++) {
-  //     Slide currentSlide = slides[i];
-  //     tabs.add(Container(
-  //       width: double.infinity,
-  //       height: double.infinity,
-  //       child: Container(
-  //         margin: EdgeInsets.only(bottom: 60.0, top: 60.0),
-  //         child: ListView(
-  //           children: <Widget>[
-  //             GestureDetector(
-  //                 child: Image.asset(
-  //               currentSlide.pathImage,
-  //               width: 200.0,
-  //               height: 200.0,
-  //               fit: BoxFit.contain,
-  //             )),
-  //             Container(
-  //               child: Text(
-  //                 currentSlide.title,
-  //                 style: currentSlide.styleTitle,
-  //                 textAlign: TextAlign.center,
-  //               ),
-  //               margin: EdgeInsets.only(top: 20.0),
-  //             ),
-  //             Container(
-  //               child: Text(
-  //                 currentSlide.description,
-  //                 style: currentSlide.styleDescription,
-  //                 textAlign: TextAlign.center,
-  //                 maxLines: 5,
-  //                 overflow: TextOverflow.ellipsis,
-  //               ),
-  //               margin: EdgeInsets.only(top: 20.0),
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //     ));
-  //   }
-  //   return tabs;
-  // }
-
   @override
   Widget build(BuildContext context) {
     var dotSliderAnimation;
