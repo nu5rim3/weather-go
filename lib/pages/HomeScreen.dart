@@ -46,6 +46,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     Padding(
                       padding: EdgeInsets.only(top: 100.0),
                     ),
+                    Image.network(
+                      'http:${snapshot.data.conditionIcon}',
+                      fit: BoxFit.cover,
+                      height: 150.0,
+                      width: 150.0,
+                    ),
                     Text(
                       snapshot.data.location,
                       style: TextStyle(
