@@ -11,10 +11,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool isLoading = false;
 
-  Future<Weather> getWeather() async {
+  Future<Weather> getWeather(city) async {
     final response = await http.get(
         Uri.encodeFull(
-            'https://api.apixu.com/v1/current.json?key=b7444d2f1d0f42819d042414192207&q=Paris'),
+            'https://api.apixu.com/v1/current.json?key=b7444d2f1d0f42819d042414192207&q=' +
+                city),
         headers: {"Accept": "application/json"});
     if (response.statusCode == 200) {
       print(response.body);
@@ -27,16 +28,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: RaisedButton(
-          child: Text("Show Me Weather"),
-          onPressed: getWeather,
-        ),
-      ),
+      // bottomNavigationBar: Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: RaisedButton(
+      //     child: Text("Show Me Weather"),
+      //     onPressed: () => getWeather('China'),
+      //   ),
+      // ),
       body: Center(
         child: FutureBuilder<Weather>(
-          future: getWeather(),
+          future: getWeather('Sri%20lanka'),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               //checks if the response returns valid data
@@ -64,6 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Text(
                       "${snapshot.data.tempc} C",
+                      style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w300),
+                    ), //displays the quote's author
+                    Text(
+                      "${snapshot.data.conditionText}",
                       style: TextStyle(
                           color: Colors.black87,
                           fontSize: 30.0,

@@ -18,7 +18,7 @@ class Weather{
 
   factory Weather.fromJson(Map<String, dynamic> json){
     return Weather(
-      location: json['location']['name'],
+      location: json['location']['country'],
       localTime : json['location']['localtime'],
       tempc : json['current']['temp_c'],
       tempf : json['current']['temp_f'],
