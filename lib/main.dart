@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather/pages/HomeScreen.dart';
 import 'package:flutter_weather/pages/IntroScreen.dart';
 import 'package:flutter_weather/pages/SplashScreen.dart';
 
@@ -18,5 +19,6 @@ void main() => runApp(MaterialApp(
         '/': (context) => SplashScreen(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/Intro': (context) => IntroScreen(),
+        '/Home': (context) => HomeScreen(),
       },
     ));
